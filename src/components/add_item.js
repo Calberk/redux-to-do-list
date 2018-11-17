@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav_button from './nav_button';
+import {Field, reduxForm} from 'redux-form'
 
 class AddItem extends Component{
     render(){
