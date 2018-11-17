@@ -1,13 +1,15 @@
 import React from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize';
-
+import {Route} from 'react-router-dom';
+import List from './list'
+import AddItem from './add_item';
 
 const App = () => (
     <div>
         <div className="container">
-            <h1 className="center">To Do List</h1>
-            <p className="center grey-text">Now with Redux</p>
+            <Route path='/' exact component={List}/>
+            <Route path='/add-item' component={AddItem}/>
         </div>
     </div>
 );
