@@ -8,8 +8,11 @@ const DEFAULT_STATE = {
 export default (state=DEFAULT_STATE, action)=>{
     switch (action.type){
         case types.GET_ALL_LIST_DATA:
-
+        console.log('getlist', action.payload)
             return {...state, all: action.payload.data.todos};
+        case types.GET_SINGLE_ITEM:
+            console.log(action);
+            return {...state, single: action.payload.data.todo}  //adding what we call from action and saves it to state under single (above)
         default:
             return state;
     }
