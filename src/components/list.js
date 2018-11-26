@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {getListData} from '../actions';
 import NavButton from './nav_button';
+import {Link} from 'react-router-dom';
 
 class List extends Component{
 
@@ -10,8 +11,16 @@ class List extends Component{
     }
     render(){
 
+        const linkStyle = {display: 'block', height: '100%'}   // make the entire div clickable
+
         const listElements = this.props.todos.map(item=>{
-            return <li key={item._id} className='collection-item'>{item.title}</li>
+            return (
+                <li key={item._id} className='collection-item'>
+                    <Link style={linkStyle} to={`/item/${item._id}`}>   
+                        {item.title}
+                    </Link>
+                </li>
+            )
         })
 
         return(
