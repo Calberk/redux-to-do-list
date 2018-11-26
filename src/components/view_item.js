@@ -6,8 +6,8 @@ import  NavButton from './nav_button'
 class ViewItem extends Component {
 
     componentDidMount(){
-        console.log('view item', this.props.match.params);   //under params we create the name of the id (did that within Route on App.js)
-        console.log(this.props.match.params.item_id);
+        // console.log('view item', this.props.match.params);   //under params we create the name of the id (did that within Route on App.js)
+        // console.log(this.props.match.params.item_id);
 
         this.props.getSingleItem(this.props.match.params.item_id);  //using the ID that is getting passed in to action getSingleItem
 
@@ -15,7 +15,7 @@ class ViewItem extends Component {
 
     render(){
 
-        console.log('hello', this.props.item)
+        // console.log('hello', this.props.item)
 
         const  {details, title} = this.props.item;   //destructing state so we can input the information
 

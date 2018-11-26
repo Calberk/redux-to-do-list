@@ -7,7 +7,7 @@ import {addTodoItem} from '../actions'
 class AddItem extends Component{
  
       renderInput(props){           //could be made seperately as its own component
-        console.log('renderinput', props)
+        // console.log('renderinput', props)
         // const {size, input, label, meta: {touched, dirty, erro}=props
         return(
             <div className={`input-field col ${props.size}`}>  
@@ -29,8 +29,8 @@ class AddItem extends Component{
 
 
     handleAddItem = async (values) => {
-        console.log('push', this.props)
-        console.log('form values', values);
+        // console.log('push', this.props)
+        // console.log('form values', values);
 
         await this.props.addTodoItem(values);
 
